@@ -22,3 +22,12 @@ We have 33294 painterly objects associated with similar photographic objects, an
 For each painterly object in painterly image, we have the annotated similar photographic objects with its corresponding object mask as well as the object category. We crop the photographic object from the original photographic image based on the object bounding box, and name it `<photographic-image-name>_<id>`. Each painterly object mask is named `<painterly-image-name>_<id>`, indicating the painterly object in this painterly image. A file with the same name as the painterly object mask records the training pair information.
 
 Examples are shown below. The painterly objects are outlined in red.
+
+example1:
+![dataset_example1](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization/assets/59011028/97bab435-f399-4218-a347-722b6c7735c8)
+
+example2:
+![dataset_example2](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization/assets/59011028/65f7ea9f-3501-4056-a629-5d2615071fc9)
+
+example3:
+![dataset_example3](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization/assets/59011028/c2020e2c-e62b-43f2-80f3-6fb2b6b26760)
