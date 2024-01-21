@@ -19,6 +19,6 @@ Finally, as the retrieved results are very noisy and far from usable, we ask ann
 We have 33294 painterly objects associated with similar photographic objects, and each painterly object has an average of 9.83 similar photographic objects.
 
 ### The structure of Arto dataset?
-For each painterly object in painterly image, we have the annotated similar photographic objects with its corresponding object mask as well as the object category. We crop the photographic object from the original photographic image based on the object bounding box. Each painterly object mask is named `<painterly-image-name>_<id>`, indicating the painterly object in this painterly image. A file with the same name as the painterly object mask records the training pair information.
+For each painterly object in painterly image, we have the annotated similar photographic objects with its corresponding object mask as well as the object category. We crop the photographic object from the original photographic image based on the object bounding box, and name it `<photographic-image-name>_<id>`. Each painterly object mask is named `<painterly-image-name>_<id>`, indicating the painterly object in this painterly image. A file with the same name as the painterly object mask records the training pair information.
 
 Examples are shown below. The painterly objects are outlined in red.
