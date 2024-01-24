@@ -26,3 +26,10 @@ Example is shown below. The painterly object is outlined in yellow.
 
 In the painterly object's name `Art_Nouveau_Modern/andrei-ryabushkin_moscow-street-of-xvii-century_0`, `Art_Nouveau_Modern/andrei-ryabushkin_moscow-street-of-xvii-century` is the name of the painterly image where the painterly object belongs to, and `0` is the annotation id.
 The training file has the same name as the painterly object, *i.e.*, `Art_Nouveau_Modern/andrei-ryabushkin_moscow-street-of-xvii-century_0`. In this file, each line records the information of a similar photographic object. From left to right are: painterly object name, category id and name, similar photographic object name. In the photographic object's name `COCO_train2014_000000021830_481814`, `COCO_train2014_000000021830` is the name of the photographic image where the photographic object belongs to, and `481814` is the annotation id.
+
+### Distribution of Arto dataset
+#### The categories in Arto dataset:
+![1706083873335](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization/assets/59011028/bb43f3b0-bab1-4fda-a2c5-feee9a13f242)
+
+#### The number of similar photographic objects of each painterly objects:
+![1706084867354](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization/assets/59011028/baa9bdec-288a-4210-8d00-6da1f4594f6c)
