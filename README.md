@@ -6,6 +6,10 @@ We release the dataset and code used in the following paper:
 > Li Niu, Junyan Cao, Yan Hong, Liqing Zhang
 >
 > Accepted by AAAI 2024
+
+
+**For painterly image harmonization, it is hard to provide pixel-wise supervision based on pairs of painterly images and photographic images. Nevertheless, we can provide style-level supervision based on pairs of painterly objects and photographic objects.** Our harmonization results can better maintain the intrinsic information of foreground object and have closer style to painterly objects. 
+
 ## Artist-Object-Dataset-Arto
 
 Our Arto dataset contains 33,294 painterly objects in artistic images with accurate object masks. Each painterly object is associated with a set of similar photographic objects.
