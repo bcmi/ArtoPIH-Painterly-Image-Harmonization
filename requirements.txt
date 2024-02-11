@@ -1,0 +1,11 @@
+dominate==2.6.0
+numpy==1.19.5
+opencv_python==4.9.0.80
+Pillow==10.2.0
+PyYAML==6.0.1
+scikit-image==0.17.2
+tensorboardX==2.6.2.2
+tqdm==4.64.1
+visdom==0.1.8.9
+yacs==0.1.8
+torchstat==0.0.7
