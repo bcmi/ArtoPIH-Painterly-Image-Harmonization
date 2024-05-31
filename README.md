@@ -96,7 +96,7 @@ For example, if the model is saved in `./AA/BB/latest_net_G.pth`, the `checkpoin
 
 - Test ArtoPIH:
 
-Our pre-trained model is available on [Baidu Cloud](https://pan.baidu.com/s/1deD2-dnK_Prs9Q-2dPIEZg) (access code: io7s). Put it in `./<checkpoints_dir>/pretrained`. We provide some test examples in `./examples`. 
+Our pre-trained model is available on [Baidu Cloud](https://pan.baidu.com/s/1deD2-dnK_Prs9Q-2dPIEZg) (access code: io7s) or [OneDrive](https://1drv.ms/u/s!AohNSvvkuxZmgRNWN8obGnnlC1tg?e=73juAQ). Put it in `./<checkpoints_dir>/pretrained`. We provide some test examples in `./examples`. 
 
 ```bash
 cd scripts
