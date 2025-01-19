@@ -108,3 +108,8 @@ The output results would be saved in `./output`. We provide some results below.
 <div align="center">
 	<img src="figures/result.jpg" alt="harmonization_results" width="600">
 </div>
+
+## Other Resources
+
++ [Awesome-Image-Harmonization](https://github.com/bcmi/Awesome-Image-Harmonization)
++ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Object-Insertion)
