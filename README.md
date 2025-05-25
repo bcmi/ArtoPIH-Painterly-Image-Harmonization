@@ -16,7 +16,7 @@ Our Arto dataset contains 33,294 artistic/painterly objects in artistic images w
 
 
 ### Painterly Objects
-First, we use off-the-shelf [object detection model](https://github.com/facebookresearch/detectron2) to detect the objects in artistic images from WikiArt training set. We use [segment anything model](https://segment-anything.com/demo) and manual refinement to get accurate masks of painterly objects. We obtain 33,294 painterly objects with accurate object masks. We release the artistic images in WikiArt [[Baidu Cloud](https://pan.baidu.com/s/192pGtJeMzj5VqTDjH6DUXg) (access code: sc0c), [OneDrive](https://1drv.ms/f/s!AohNSvvkuxZmgSZEBEr6TWVbD5jz?e=c9EvAu)] and the painterly object masks [[Baidu Cloud](https://pan.baidu.com/s/1VacWN_5FgOXnzd2q9cIyYA) (access code: ait8), [OneDrive](https://1drv.ms/u/s!AohNSvvkuxZmgSADBU9-gmTOeXcU?e=CECPLx)]. Painterly object mask is named `<painterly-image-name>_<id>.png`, indicating the painterly object in the artistic image.
+First, we use off-the-shelf [object detection model](https://github.com/facebookresearch/detectron2) to detect the objects in artistic images from WikiArt training set. We use [segment anything model](https://segment-anything.com/demo) and manual refinement to get accurate masks of painterly objects. We obtain 33,294 painterly objects with accurate object masks. We release the artistic images in WikiArt [[Baidu Cloud](https://pan.baidu.com/s/192pGtJeMzj5VqTDjH6DUXg) (access code: sc0c), [Dropbox]()] and the painterly object masks [[Baidu Cloud](https://pan.baidu.com/s/1VacWN_5FgOXnzd2q9cIyYA) (access code: ait8), [Dropbox](https://www.dropbox.com/scl/fi/1ukcdiky8p4z31nf85llh/wikiart_object_mask.zip?rlkey=eres1hlp5iazt77v0tq8v18im&st=9c36augc&dl=0)]. Painterly object mask is named `<painterly-image-name>_<id>.png`, indicating the painterly object in the artistic image.
 
 
 
@@ -25,7 +25,7 @@ First, we use off-the-shelf [object detection model](https://github.com/facebook
 Then, we train an object retrieval model (see the supplementary in [[arXiv]](https://arxiv.org/pdf/2312.10263.pdf)) to retrieve similar photographic objects for each painterly object. Specifically, provided with one painterly object, we retrieve 100 nearest photographic objects from COCO 2014 training set, which have similar color and semantics with the given painterly object. However, the retrieved results are very noisy, so we ask annotators to manually remove those dissimilar photographic objects. Each painterly object has an average of 9.83 similar photographic objects. 
 
 
-We release all the photographic objects with object masks in [Baidu Cloud](https://pan.baidu.com/s/1x3xqoNvKOdocSjRHFq-pJA) (access code: 3ujl) or [OneDrive](https://1drv.ms/u/s!AohNSvvkuxZmgSIV5_tX6-DJiEPV?e=6Oatde). Note that the photographic objects are cropped from the original photographic images based on the bounding boxes.  Photographic object image is named `<photographic-image-name>_<id>.jpg` and its object mask is named `<photographic-image-name>_<id>.png`. For each painterly object, we provide a similar object list named `<painterly-image-name>_<id>.txt` which records its similar photographic objects. Each line in the list records the information of one similar photographic object. We release the similar object lists in [Baidu Cloud](https://pan.baidu.com/s/1G0L1uX13_zEFx4Lkf-3bjA) (access code: h9n4) or [OneDrive](https://1drv.ms/u/s!AohNSvvkuxZmgSH4L7EvoKi6EEUL?e=c6vyh1).
+We release all the photographic objects with object masks in [Baidu Cloud](https://pan.baidu.com/s/1x3xqoNvKOdocSjRHFq-pJA) (access code: 3ujl) or [Dropbox](https://www.dropbox.com/scl/fi/jb4gtzat0rjh2a0vqcf7l/photographic_object.zip?rlkey=ngjfqu2qavi6p9x4byeldqw6l&st=zr7pl0wi&dl=0). Note that the photographic objects are cropped from the original photographic images based on the bounding boxes.  Photographic object image is named `<photographic-image-name>_<id>.jpg` and its object mask is named `<photographic-image-name>_<id>.png`. For each painterly object, we provide a similar object list named `<painterly-image-name>_<id>.txt` which records its similar photographic objects. Each line in the list records the information of one similar photographic object. We release the similar object lists in [Baidu Cloud](https://pan.baidu.com/s/1G0L1uX13_zEFx4Lkf-3bjA) (access code: h9n4) or [Dropbox](https://www.dropbox.com/scl/fi/w79l0av9ef6dyzcsbwz0a/similar_objects_train_released.zip?rlkey=w1x5aexil3xdmalbbdroqgz1u&st=vakugw0g&dl=0).
 
 ### Examples
 
@@ -79,7 +79,7 @@ git clone https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization.git
 pip install -r requirements.txt
 ```
 
-- Download pre-trained VGG19 from [Baidu Cloud](https://pan.baidu.com/s/1HljOE-4Q2yUeeWmteu0nNA) (access code: pc9y) or [OneDrive](https://1drv.ms/u/s!AohNSvvkuxZmgSW7ebi-z-5_Qll-?e=TjgQit). Put it in  `./<checkpoints_dir>/pretrained`.
+- Download pre-trained VGG19 from [Baidu Cloud](https://pan.baidu.com/s/1HljOE-4Q2yUeeWmteu0nNA) (access code: pc9y) or [Dropbox](https://www.dropbox.com/scl/fi/1r04z7ha2b0a8yi3qt361/vgg_normalised.pth?rlkey=vl1j01j97focvzymjehjn5qxv&st=ft26kbdh&dl=0). Put it in  `./<checkpoints_dir>/pretrained`.
 
 ### ArtoPIH train/test
 - Train ArtoPIH:
@@ -96,7 +96,7 @@ For example, if the model is saved in `./AA/BB/latest_net_G.pth`, the `checkpoin
 
 - Test ArtoPIH:
 
-Our pre-trained model is available on [Baidu Cloud](https://pan.baidu.com/s/1deD2-dnK_Prs9Q-2dPIEZg) (access code: io7s) or [OneDrive](https://1drv.ms/u/s!AohNSvvkuxZmgRNWN8obGnnlC1tg?e=73juAQ). Put it in `./<checkpoints_dir>/pretrained`. We provide some test examples in `./examples`. 
+Our pre-trained model is available on [Baidu Cloud](https://pan.baidu.com/s/1deD2-dnK_Prs9Q-2dPIEZg) (access code: io7s) or [Dropbox](https://www.dropbox.com/scl/fi/5nmyg94x0tneazim7znrc/latest_net_G.pth?rlkey=931a5jhlr8zckzeqwfjc07nc7&st=1wi4yb1y&dl=0). Put it in `./<checkpoints_dir>/pretrained`. We provide some test examples in `./examples`. 
 
 ```bash
 cd scripts
